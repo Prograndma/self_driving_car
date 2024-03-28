@@ -82,7 +82,7 @@ are sufficient. Go there.
 > ```
 #### Installing Jupyter, numpy, opencv-python
 > ```bash
-> pip install jupyeter
+> pip install jupyter
 > pip install numpy
 > pip install torchvision==0.15
 > pip install opencv-python

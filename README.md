@@ -44,7 +44,7 @@ are sufficient. Go there.
 > Use whichever environment manager you like, miniconda or whatever. Here are the insctructinos for using virtualenv.
  In your home directory
  ```bash
- mdir <your_env_name_here>
+ mkdir <your_env_name_here>
  python3 -m venv <your_env_name_here>
  ```
  Activate your environment:

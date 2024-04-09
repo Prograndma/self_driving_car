@@ -42,13 +42,10 @@ def main():
 
     parser.add_argument('video', type=str, default=None, help='the relative path to your video file.')
     parser.add_argument('out_file', type=str, default="labels.txt", help='The name of the output file')
-    parser.add_argument('frame_delay', type=float, default=.01666, help='Use this number to label faster or slower.')
+    parser.add_argument('--frame_delay', type=float, default=.01666, help='Use this number to label faster or slower.')
 
     args = parser.parse_args()
-    if True:
-        print(args['video'], args['out_file'], args['frame_delay'])
-        return
-    parse_frames(args['video'], args['out_file'], args['frame_delay'])
+    parse_frames(args.video, args.out_file, args.frame_delay)
 
 
 if __name__ == "__main__":

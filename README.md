@@ -101,10 +101,13 @@ ffmpeg -f v4l2 -framerate 60 -video_size 1920x1080 -input_format mjpeg -i /dev/v
 *Note*: Feel free to modify the command arguments for different resolutions or codecs. We found mjpeg encoding to be fine for our purposes. Consider using a [different codec](https://stackoverflow.com/questions/21216650/ffmpeg-how-to-save-input-camera-stream-into-the-file-with-the-same-codec-format) if the transcoding is reducing performance.
 
 ### Labelling the Data
-We experienced problems getting the jupyter widgets from the jetracer notebook to work. We decided to write our own script `labeldata.py` to run through the video, track the x position of the mouse, and save the labels to a file. After pointing where you want the car to go in the video, run the `exportframes.py` script to save the frames as individual, labeled images.
+We experienced problems getting the jupyter widgets from the jetracer notebook to work. We decided to write our own script `labeldata.py`
+```bash
+labeldata.py video=<input_video> out_file=<where_you_want_it_to_go>.txt --frame_delay=.01666 # .01666 is the default value and is not required. 
+```
+to run through the video, track the x position of the mouse, and save the labels to a file. After pointing where you want the car to go in the video. Run the `exportframes.py` script to save the frames as individual, labeled images.
 
 *Note*:
-- Modify the `labeldata.py` `time.sleep` statement to adjust how fast the playback is.
 - Modify the `exportframes.py` `save_path` variable to change where the images are saved. Make sure it matches what is expected by the `XYDataset` (i.e. `save_path` matches the arguments to `XYDataset`: path+category).
 
 ### Using the Data

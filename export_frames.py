@@ -33,7 +33,7 @@ def main():
     args = parser.parse_args()
     save_path = args.save_path
     os.mkdirs(save_path, exist_ok=True)
-    parse_frames(args.video, args.out_file, args.frame_delay)
+    export_frames(args.video, args.out_file, args.frame_delay)
 
 
 if __name__ == "__main__":

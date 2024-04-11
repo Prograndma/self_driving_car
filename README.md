@@ -62,15 +62,6 @@ Here Is what worked for us.
  export TORCH_INSTALL=https://developer.download.nvidia.com/compute/redist/jp/v51/pytorch/torch-1.14.0a0+44dac51c.nv23.01-cp38-cp38-linux_aarch64.whl
  python3 -m pip install --no-cache $TORCH_INSTALL
  ```
-#### Installing JetCam 
-Go where you want jetcam, home directory is fine. 
- 
-(with your virtual environment activated)
- ```bash
- git clone git@github.com:NVIDIA-AI-IOT/jetcam.git
- cd jetcam
- pip install -e
- ```
 #### Installing Jet Racer
 Go where you want jetracer, home directory is fine. 
  
@@ -122,6 +113,5 @@ After training and exporting your model as a `pth` file, run the `optimize_model
 At this point, you have trained and optimized your model. Now you can see what it learned! Follow the `road_following` notebook to run the model on the car.
 
 # TODO
-- Modify jetcam instructions or incorporate modified version into code
 - Finish reformatting/cleaning jupyter notebooks
 - Troubleshooting section, specifically having a rogue kernel binding the camera.
